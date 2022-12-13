@@ -9,9 +9,10 @@
 <body>
     <?php
         $search = $_GET['word'];
+        $oldArray = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, incidunt id maiores et at quibusdam deserunt alias sequi delectus itaque porro, minima ipsam! Mollitia similique dolore dolorem. Suscipit, voluptates optio.';
         $newArray = '';
     ?>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, incidunt id maiores et at quibusdam deserunt alias sequi delectus itaque porro, minima ipsam! Mollitia similique dolore dolorem. Suscipit, voluptates optio.</p>
+    <?php echo "<p>${oldArray}</p>";?>
     <form action="" method="GET">
         <label for="word">Parola da censurare</label>
         <input type="text" id="word" name="search">
