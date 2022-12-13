@@ -10,15 +10,18 @@
     <?php
         $search = $_GET['word'];
         $oldArray = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, incidunt id maiores et at quibusdam deserunt alias sequi delectus itaque porro, minima ipsam! Mollitia similique dolore dolorem. Suscipit, voluptates optio.';
-        $newArray = '';
+        $newArray = str_ireplace($search, '***', $oldArray);
     ?>
+    <h1>Testo di riferimento</h1>
     <?php echo "<p>${oldArray}</p>";?>
     <form action="" method="GET">
         <label for="word">Parola da censurare</label>
-        <input type="text" id="word" name="search">
+        <input type="text" id="word" name="word">
         <button>Cenzura!</button>
     </form>
+    Parola censurata:
+    <?= $search; ?>
     <h1>Nuovo testo censurato</h1>
-    <?= "<p>${newArray}</p>"; ?>
+    <p><?php echo $newArray; ?></p>
 </body>
 </html>
